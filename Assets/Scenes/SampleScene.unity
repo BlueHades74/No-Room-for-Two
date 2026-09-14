@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947740683779663895, guid: bae4a6f864a8ddd458975c6bb05767e7, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 6241765041892665228, guid: bae4a6f864a8ddd458975c6bb05767e7, type: 3}
       propertyPath: cam
@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2947740683779663895, guid: bae4a6f864a8ddd458975c6bb05767e7, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 6241765041892665228, guid: bae4a6f864a8ddd458975c6bb05767e7, type: 3}
       propertyPath: cam
