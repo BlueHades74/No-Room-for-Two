@@ -5,7 +5,6 @@ public class DoorScript : MonoBehaviour
     [SerializeField] private ButtonScript button;
     [SerializeField] private float maxClimb;
     [SerializeField] private float climbSpeed;
-    [SerializeField] private bool test;
 
     private Vector2 origPos;
 
@@ -26,7 +25,7 @@ public class DoorScript : MonoBehaviour
         {
             Vector2 pos = transform.position;
 
-            if (test)
+            if (button.down)
             {
                 pos.y += climbSpeed * Time.deltaTime;
             }

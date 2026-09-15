@@ -9,7 +9,7 @@ public class ButtonScript : MonoBehaviour
     private GameObject buttonBase;
     private bool pressed;
 
-    private bool down; 
+    public bool down { get; private set; }
 
     private void Start()
     {
@@ -29,6 +29,8 @@ public class ButtonScript : MonoBehaviour
         }
 
         currentDisplacement = Mathf.Clamp(currentDisplacement, 0, maxDisplacement);
+
+        down = (currentDisplacement == 0);
 
         Vector2 pos = buttonBase.transform.position;
         pos.y += (currentDisplacement + 0.1f)/5;
