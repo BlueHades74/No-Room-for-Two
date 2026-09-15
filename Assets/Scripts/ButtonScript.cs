@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
+    [SerializeField] GameObject door;
+
     private float maxDisplacement = 0.5f;
     private float currentDisplacement;
     private GameObject buttonBase;
     private bool pressed;
+
+    private bool down; 
 
     private void Start()
     {
