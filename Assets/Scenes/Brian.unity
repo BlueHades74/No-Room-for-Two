@@ -281,7 +281,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -316,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 233388358}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: -2, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,7 +347,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1982744099}
+    TrackingTarget: {fileID: 2101855492}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -597,7 +597,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -758,7 +758,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -847,7 +847,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823491949}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -860,7 +860,7 @@ Transform:
   - {fileID: 233388359}
   - {fileID: 1298656845}
   - {fileID: 2101855492}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1336516556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &823491952
 MonoBehaviour:
@@ -878,8 +878,8 @@ MonoBehaviour:
   brain2: {fileID: 551284803}
   monoCam1: {fileID: 1320618180}
   monoCam2: {fileID: 233388361}
-  Player1: {fileID: 7973968727594631239}
-  Player2: {fileID: 1982744099}
+  Player1: {fileID: 1298656845}
+  Player2: {fileID: 2101855492}
   breakDistance: 6
 --- !u!1 &1298656844
 GameObject:
@@ -890,6 +890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1298656845}
+  - component: {fileID: 1298656846}
   m_Layer: 0
   m_Name: Y-TrackerP1
   m_TagString: Untagged
@@ -912,6 +913,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 823491951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298656846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298656844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c3e1a399f979842ba4420166a80c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerYTracker
+  player: {fileID: 7973968727594631239}
+  scrollerCam: {fileID: 148230656}
 --- !u!1 &1320618177
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +954,7 @@ Transform:
   m_GameObject: {fileID: 1320618177}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -2, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -970,7 +985,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -996,7 +1011,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 7973968727594631239}
+    TrackingTarget: {fileID: 1298656845}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1035,7 +1050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1336516555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,9 +1063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b08946b5cca4a1d43a98cfc6e53b53e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SidescrollerScript
-  scrollSpeed: 0
+  scrollSpeed: 1
   player1: {fileID: 7973968727594631233}
   player2: {fileID: 260116208}
+  cam: {fileID: 148230655}
 --- !u!4 &1336516556
 Transform:
   m_ObjectHideFlags: 0
@@ -1065,6 +1081,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2025701691}
+  - {fileID: 823491951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1524495206
@@ -1263,7 +1280,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -1709,7 +1726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2025701691
 Transform:
   m_ObjectHideFlags: 0
@@ -1837,6 +1854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2101855492}
+  - component: {fileID: 2101855493}
   m_Layer: 0
   m_Name: Y-TrackerP2
   m_TagString: Untagged
@@ -1859,6 +1877,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 823491951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2101855493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101855491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c3e1a399f979842ba4420166a80c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerYTracker
+  player: {fileID: 1982744099}
+  scrollerCam: {fileID: 148230656}
 --- !u!1001 &7973968727594631232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2042,10 +2074,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 823491951}
+  - {fileID: 1336516556}
   - {fileID: 1524495208}
   - {fileID: 469445140}
   - {fileID: 1911342837}
   - {fileID: 7973968727594631232}
   - {fileID: 1982744093}
-  - {fileID: 1336516556}

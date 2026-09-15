@@ -5,6 +5,7 @@ public class SidescrollerScript : MonoBehaviour
     [SerializeField] private float scrollSpeed = 1f;
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
+    [SerializeField] private Camera cam;
 
     private float displacement;
     private Vector2 tempPos;
@@ -22,7 +23,6 @@ public class SidescrollerScript : MonoBehaviour
         }
 
         //Determine how far from the screen the players should be kept
-        Camera cam = transform.GetChild(0).GetComponent<Camera>();
         displacement = (cam.orthographicSize*cam.aspect) - (player1.GetComponent<SpriteRenderer>().bounds.size.x/2);
     }
 
