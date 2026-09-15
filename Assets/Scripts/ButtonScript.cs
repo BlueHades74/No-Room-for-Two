@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
+    [SerializeField] GameObject door;
+
     private float maxDisplacement = 0.5f;
     private float currentDisplacement;
     private GameObject buttonBase;
     private bool pressed;
+
+    public bool down { get; private set; }
 
     private void Start()
     {
@@ -25,6 +29,8 @@ public class ButtonScript : MonoBehaviour
         }
 
         currentDisplacement = Mathf.Clamp(currentDisplacement, 0, maxDisplacement);
+
+        down = (currentDisplacement == 0);
 
         Vector2 pos = buttonBase.transform.position;
         pos.y += (currentDisplacement + 0.1f)/5;
