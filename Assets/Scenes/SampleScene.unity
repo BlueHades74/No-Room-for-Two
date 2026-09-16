@@ -293,6 +293,7 @@ MonoBehaviour:
   scrollSpeed: 1
   player1: {fileID: 7973968727594631233}
   player2: {fileID: 260116208}
+  cam: {fileID: 0}
 --- !u!4 &1336516556
 Transform:
   m_ObjectHideFlags: 0
