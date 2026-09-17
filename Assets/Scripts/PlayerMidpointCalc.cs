@@ -14,6 +14,8 @@ public class PlayerMidpointCalc : MonoBehaviour
 
     private void SetPosition()
     {
-        gameObject.transform.position = new Vector2((BluePlayer.position.x + RedPlayer.position.x) / 2, gameObject.transform.position.y);
+        // Grab the midpoint between the players and set the position to that value
+        transform.position = new Vector2((BluePlayer.position.x + RedPlayer.position.x) / 2,
+                                                    (BluePlayer.position.y + RedPlayer.position.y) / 2);
     }
 }
