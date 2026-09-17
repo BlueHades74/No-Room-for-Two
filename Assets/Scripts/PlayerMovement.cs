@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<float>();
-        Debug.Log(moveInput);
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -40,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
             // don't remove from jumpCount past initial button press
             if (!context.performed) return;
             jumpCount--;
-            Debug.Log($"Jump Count: {jumpCount}");
         }
     }
 
@@ -52,6 +50,5 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJumpCount()
     {
         jumpCount = maxJumpCount;
-        Debug.Log($"Jump Count: {jumpCount}");
     }
 }
