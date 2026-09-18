@@ -21,11 +21,11 @@ public class ButtonScript : MonoBehaviour
     {
         if (pressed)
         {
-            currentDisplacement -= 0.5f * Time.deltaTime;
+            currentDisplacement -= 2f * Time.deltaTime;
         }
         else
         {
-            currentDisplacement += 0.5f * Time.deltaTime;
+            currentDisplacement += 2f * Time.deltaTime;
         }
 
         currentDisplacement = Mathf.Clamp(currentDisplacement, 0, maxDisplacement);
