@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4584645886333592010}
   - component: {fileID: 8683425600793156358}
-  - component: {fileID: 29602103621000130}
+  - component: {fileID: 7624097015483519496}
   m_Layer: 0
   m_Name: ClipHitbox
   m_TagString: Untagged
@@ -216,9 +216,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 0.8, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &29602103621000130
+--- !u!114 &7624097015483519496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,6 +227,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8198055635681327950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba7eeacaeb45fe429aae241a4978200, type: 3}
+  m_Script: {fileID: 11500000, guid: fc29bed60fd3d2a4e9deff72fdb0dacc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WallClipScript
+  m_EditorClassIdentifier: Assembly-CSharp::HazardDamage

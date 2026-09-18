@@ -6,7 +6,7 @@ public class HazardDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!gameObject.tag.Contains(collision.gameObject.tag))
+        if (!gameObject.tag.Contains(collision.gameObject.tag) && collision.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
             //collision.gameObject.SetActive(false);
 
@@ -17,11 +17,10 @@ public class HazardDamage : MonoBehaviour
 
             collision.enabled = false;
 
-            if (collision.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
-            {
-                rb.AddForceY(10f, ForceMode2D.Impulse);
-                rb.gravityScale = 1;
-            }
+
+            rb.AddForceY(10f, ForceMode2D.Impulse);
+            rb.gravityScale = 1;
+            
 
             playerDied.Invoke(collision.gameObject);
         }
