@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class ExitDoorSceneSwap : MonoBehaviour
 {
     [SerializeField] private string sceneToLoad;
-
     [SerializeField] private int secondsToWaitInExit = 6;
     private int playersInExits = 0;
     private int ticksInExit = 0;
@@ -39,6 +38,8 @@ public class ExitDoorSceneSwap : MonoBehaviour
     {
         // add code to transfer to next scene
         Debug.Log($"Loading {sceneToLoad}...");
+        if (sceneToLoad != null) SceneManager.LoadScene(sceneToLoad);
+        else Debug.LogError("Nothing found in sceneToLoad variable!");
     }
 
     private IEnumerator TimeInExit()
