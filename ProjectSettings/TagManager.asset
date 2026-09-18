@@ -10,6 +10,8 @@ TagManager:
   - Ground
   - BlueGrounded
   - RedGrounded
+  - KillerWall
+  - Wall
   layers:
   - Default
   - TransparentFX
