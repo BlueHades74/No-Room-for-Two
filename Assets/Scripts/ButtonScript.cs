@@ -9,6 +9,8 @@ public class ButtonScript : MonoBehaviour
     private GameObject buttonBase;
     private bool pressed;
 
+    private int playersOn;
+
     public bool down { get; private set; }
 
     private void Start()
@@ -41,7 +43,13 @@ public class ButtonScript : MonoBehaviour
     {
         if (gameObject.tag.Contains(collision.gameObject.tag))
         {
-            pressed = true;
+            playersOn++;
+            playersOn = Mathf.Clamp(playersOn, 0, 2);
+
+            if (playersOn > 0)
+            {
+                pressed = true;
+            }
         }
     }
 
@@ -49,7 +57,13 @@ public class ButtonScript : MonoBehaviour
     {
         if(gameObject.tag.Contains(collision.gameObject.tag))
         {
-            pressed = false;
+            playersOn--;
+            playersOn = Mathf.Clamp(playersOn, 0, 2);
+
+            if (playersOn < 1)
+            {
+                pressed = false;
+            }
         }
     }
 }
