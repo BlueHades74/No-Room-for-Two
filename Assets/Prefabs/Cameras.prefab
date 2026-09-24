@@ -208,7 +208,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 0, z: 0}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -616,7 +616,8 @@ MonoBehaviour:
   monoCam2: {fileID: 8743524175595703411}
   Player1: {fileID: 0}
   Player2: {fileID: 0}
-  breakDistance: 6
+  breakDistance: 10
+  horizontalBreakDis: 12
 --- !u!1 &4469608011741098837
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,7 +719,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 0, z: 0}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
