@@ -47,6 +47,9 @@ public class ButtonScript : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        pressed = false;
+        if(gameObject.tag.Contains(collision.gameObject.tag))
+        {
+            pressed = false;
+        }
     }
 }
