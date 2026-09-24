@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ public class ExitDoorSceneSwap : MonoBehaviour
     [SerializeField] private int secondsToWaitInExit = 6;
     private int playersInExits = 0;
     private int ticksInExit = 0;
+
+    public static event System.Action<bool> bothPlayersInExits;
 
     private void OnEnable()
     {
@@ -24,13 +27,18 @@ public class ExitDoorSceneSwap : MonoBehaviour
     private void AddTotalPlayers()
     {
         playersInExits++;
-        if (playersInExits == 2) StartCoroutine(TimeInExit());
+        if (playersInExits == 2)
+        {
+            StartCoroutine(TimeInExit());
+            bothPlayersInExits?.Invoke(true);
+        }
     }
     
     private void SubTotalPlayers()
     {
         playersInExits--;
         StopAllCoroutines();
+        bothPlayersInExits?.Invoke(false);
         ticksInExit = 0;
     }
 

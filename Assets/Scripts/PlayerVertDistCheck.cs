@@ -10,6 +10,7 @@ public class PlayerVertDistCheck : MonoBehaviour
     [SerializeField] private Transform Player1;
     [SerializeField] private Transform Player2;
     [SerializeField] private float breakDistance = 6;
+    [SerializeField] private float horizontalBreakDis = 12;
 
     private void LateUpdate()
     {
@@ -26,7 +27,8 @@ public class PlayerVertDistCheck : MonoBehaviour
             monoCam2.Target.TrackingTarget = Player1;
         }
 
-        if (Mathf.Abs(Player2.position.y - Player1.position.y) > breakDistance)
+        if (Mathf.Abs(Player2.position.y - Player1.position.y) > breakDistance || 
+            Mathf.Abs(Player2.position.x - Player1.position.x) > horizontalBreakDis)
         {
             monoCam1.Priority = 20;
             monoCam2.Priority = 20;
